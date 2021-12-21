@@ -9,7 +9,8 @@ To make searching images as easy as grepping text files. This tool supports extr
 ## Todo
 
 - [ ] Add automated tool / nuget package deployment  
-- [ ] Support filtering images by labels
+- [X] Cross platform support (linux, osx, windows)
+- [X] Support filtering images and predictions by labels
 - [ ] Support extracting text from images
 - [ ] Add Configurable Model and Weights
 

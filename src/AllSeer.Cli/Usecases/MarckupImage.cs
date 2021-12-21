@@ -3,7 +3,7 @@ using Yolov5Net.Scorer;
 
 namespace AllSeer.Cli.Usecases
 {
-    public class GeneratePredictionImage
+    public class MarkupImage
     {
         public void Execute(List<YoloPrediction> predictions, string imagePath, string outputPath)
         {

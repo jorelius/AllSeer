@@ -30,7 +30,7 @@ public class Controller
 
             if (!string.IsNullOrEmpty(args.OutputFilePath))
             {
-                new GeneratePredictionImage().Execute(predictions, args.FilePath, args.OutputFilePath);
+                new MarkupImage().Execute(predictions, args.FilePath, args.OutputFilePath);
             }
         }
     }
