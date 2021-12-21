@@ -7,13 +7,14 @@ using Yolov5Net.Scorer.Models;
 [TabCompletion]
 [ArgExceptionBehavior(ArgExceptionPolicy.StandardExceptionHandling)]
 [ArgDescription("Object detection and classification")]
-[ArgExample("allseer predict -f './file.jpg'", "", Title = "predict example")]
+[ArgExample("allseer predict -s './file.jpg' -o './result.jpg'", "", Title = "generate label predictions")]
+[ArgExample("allseer predict -s './file.jpg' -f person", "", Title = "filter predictions to only those with label 'person'")]
 public class Controller
 {
     [HelpHook, ArgShortcut("-?"), ArgDescription("Shows this help")]
     public bool Help { get; set; }
 
-    [ArgActionMethod, ArgDescription("Generate Label Predictions. "), ArgShortcut("p")]
+    [ArgActionMethod, ArgDescription("Generate Label Predictions and markup image."), ArgShortcut("p")]
     public void Predict(GeneratePredictionsArgs args)
     {
         var predictions = new GeneratePredictions().Execute(args.FilePath);

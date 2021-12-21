@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using PowerArgs;
 
-Controller parsed = null;
+Controller? parsed = null;
 try
 {
 	Console.WriteLine();
