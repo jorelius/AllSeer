@@ -1,5 +1,8 @@
 # AllSeer
 
+[![.NET](https://github.com/jorelius/AllSeer/actions/workflows/dotnet.yml/badge.svg)](https://github.com/jorelius/AllSeer/actions/workflows/dotnet.yml)
+[![CodeQL](https://github.com/jorelius/AllSeer/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/jorelius/AllSeer/actions/workflows/codeql-analysis.yml)
+
 ## Purpose
 
 To make searching images as easy as grepping text files. This tool supports extracting predictions and generating output images with prediction markup.
