@@ -31,6 +31,11 @@ jobs:
       with:
         fetch-depth: 2
 
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0'
+
     - run: git checkout HEAD^2
       if: ${{ github.event_name == 'pull_request' }}
 
