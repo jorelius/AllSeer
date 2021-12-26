@@ -2,12 +2,11 @@ name: Deploy to Nuget
 
 on:
   push:
-    branches: [main]
     tags:
       - "v*"
 
 env:
-  PROJECT_PATH: "src/AllSeer.Cli/"
+  PROJECT_PATH: "./src/AllSeer.Cli/"
   NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json"
 
 jobs:
