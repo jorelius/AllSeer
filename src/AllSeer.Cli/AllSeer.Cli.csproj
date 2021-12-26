@@ -13,6 +13,10 @@
     <Version>1.0.0</Version>
     <Authors>Jorel Fermin</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Tags>cli, image, search, predictions</Tags>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/jorelius/AllSeer.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +29,7 @@
     <None Update="Assets\Weights\yolov5s.onnx">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
