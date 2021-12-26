@@ -2,24 +2,28 @@ name: .NET
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.x
-    - name: Restore dependencies
-      run: dotnet restore ./src/AllSeer.sln
-    - name: Build
-      run: dotnet build ./src/AllSeer.sln --no-restore
-    - name: Test
-      run: dotnet test ./src/AllSeer.sln --no-build --verbosity normal
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore ./src/AllSeer.sln
+
+      - name: Build
+        run: dotnet build ./src/AllSeer.sln --no-restore
+
+      - name: Test
+        run: dotnet test ./src/AllSeer.sln --no-build --verbosity normal
