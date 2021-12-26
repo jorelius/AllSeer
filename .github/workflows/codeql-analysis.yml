@@ -8,7 +8,7 @@ on:
     paths:
       - "**.cs"
       - "**.csproj"
-      
+
   pull_request:
     branches: [main]
     paths:
@@ -41,8 +41,8 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - run: |
-          dotnet build ./src/AllSeer.sln
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v1
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
