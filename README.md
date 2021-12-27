@@ -11,11 +11,13 @@ To make searching images as easy as grepping text files. This tool supports extr
 
 ## Todo
 
-- [ ] Add automated tool / nuget package deployment  
+- [X] Add automated tool / nuget package building
+- [ ] Add Configurable Model and Weights
+- [ ] Support downloading model and weights
 - [X] Cross platform support (linux, osx, windows)
 - [X] Support filtering images and predictions by labels
 - [ ] Support extracting text from images
-- [ ] Add Configurable Model and Weights
+- [ ] Build platform / architecture specific self contained binaries (linux, windows, osx / x64, x32, ARM, etc)
 
 Pull requests are more than welcomed!
 
