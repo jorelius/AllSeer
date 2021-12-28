@@ -26,10 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Assets\Weights\yolov5s.onnx">
-        <Pack>true</Pack>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 

@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AllSeer.Cli.Usecases;
 using PowerArgs;
+
+await new CreateNewProfile().Execute();
 
 Controller? parsed = null;
 try

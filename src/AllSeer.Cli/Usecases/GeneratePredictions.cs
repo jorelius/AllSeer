@@ -10,7 +10,7 @@ public class GeneratePredictions
     {
         using var image = Image.FromFile(imagePath);
 
-        using var scorer = new YoloScorer<YoloCocoP5Model>("Assets/Weights/yolov5s.onnx");
+        using var scorer = new YoloScorer<YoloCocoP5Model>(Config.DefaultModelPath);
 
         return scorer.Predict(image);
     }
