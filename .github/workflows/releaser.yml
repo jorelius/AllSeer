@@ -1,0 +1,28 @@
+name: Deploy to Nuget
+
+on:
+  push:
+    tags:
+      - "v*"
+
+env:
+  PROJECT_PATH: "./src/AllSeer.Cli"
+  NUGET_SOURCE_URL: "https://api.nuget.org/v3/index.json"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Publish
+        run: |
+          dotnet tool install --global dotnet-releaser --version "0.1.*" 
+          dotnet-releaser publish --nuget-token ${{ secrets.NUGET_DEPLOY_KEY }} --github-token ${{secrets.TOKEN_GITHUB}} ./dotnet-releaser.toml

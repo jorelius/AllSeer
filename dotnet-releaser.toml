@@ -1,0 +1,28 @@
+profile = "custom"
+
+# configuration file for dotnet-releaser
+[msbuild]
+project = "./src/AllSeer.Cli/AllSeer.Cli.csproj"
+[github]
+user = "jorelius"
+repo = "https://github.com/jorelius/AllSeer"
+version_prefix = "v"
+[changelog]
+publish = false
+
+# Create zip files only for Windows platforms
+[[pack]]
+rid = ["win-x64"]
+kinds = ["zip"]
+# Default targets for Linux/Ubuntu Debian compatible distro with debian and tar packages
+[[pack]]
+rid = ["linux-x64"]
+kinds = ["deb", "tar"]
+# Default targets for Linux/Redhat compatible distro with rpm and tar packages
+[[pack]]
+rid = ["rhel-x64"]
+kinds = ["rpm", "tar"]
+# Default targets for macOS, only tar files for this platform
+[[pack]]
+rid = ["osx-x64"]
+kinds = ["tar"]

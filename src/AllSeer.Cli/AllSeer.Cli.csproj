@@ -10,7 +10,7 @@
     <ToolCommandName>allseer</ToolCommandName>
     <AssemblyName>allseer</AssemblyName>
 
-    <Version>1.0.0</Version>
+    <Copyright>Jorel Fermin</Copyright>
     <Authors>Jorel Fermin</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Tags>cli, image, search, predictions</Tags>
@@ -19,14 +19,22 @@
     <RepositoryUrl>https://github.com/jorelius/AllSeer.git</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.10.0" />
+    <PackageReference Include="MinVer" Version="2.5.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="PowerArgs" Version="3.6.0" />
     <PackageReference Include="Yolov5Net" Version="1.0.9" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
