@@ -5,8 +5,10 @@ profile = "custom"
 project = "./src/AllSeer.Cli/AllSeer.Cli.csproj"
 [github]
 user = "jorelius"
-repo = "https://github.com/jorelius/AllSeer"
+repo = "AllSeer"
 version_prefix = "v"
+[nuget]
+source = "https://api.nuget.org/v3/index.json"
 [changelog]
 publish = false
 
