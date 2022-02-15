@@ -23,7 +23,7 @@ To make searching images as easy as grepping text files. This tool supports extr
 
 #### Self Contained
 
-TBD
+win-x64, linux-x64, rhel-x64, osx-x64
 
 ## Usage
 
